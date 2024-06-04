@@ -1,0 +1,42 @@
+.memory{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;  
+  gap: 20px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.modelEach {
+  font-size: 0.8rem;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 1px rgba(0, 0, 0, 0.285);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 0.6rem;
+  border: transparent solid 1px;
+  width: calc(33.33333% - 16px);
+}
+
+.memory .modelEach .memory{
+
+  font-size: 1rem;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
+
+.modelEach .price{
+  font-size: 0.8rem;
+  color: rgb(161, 161, 161)
+}
+
+.modelEach:not(.active):hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 2px rgb(0, 0, 0);
+}
+
+.active{
+  border: #007aff solid 1px;
+  box-shadow: 0 4px 8px -2px rgba(0,87,182,0.32) ;}

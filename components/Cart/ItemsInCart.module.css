@@ -1,0 +1,7 @@
+.containerItems {
+  background-color: white;
+  margin-top: 10px;
+  overflow-y: scroll;
+  max-height: 40vh;
+}
+

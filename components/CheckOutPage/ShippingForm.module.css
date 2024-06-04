@@ -1,0 +1,221 @@
+.container{
+
+  margin-left: auto;
+  margin-right: auto;}
+  
+  .container h2{
+    font-family: "Rubik",sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: -5px;
+  }
+  
+  
+  .formcontrol {
+    margin-bottom: 1rem;
+  }
+  
+  .formcontrol input,
+  .formcontrol label {
+    display: block;
+    
+    
+  }
+  
+  .formcontrol input{
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.393);
+  }
+  
+  .formcontrol label {
+    font-size: 1rem;
+    font-family: "Rubik",sans-serif;
+    color: rgb(92, 92, 92);
+    font-weight: 500;
+  }
+  
+  .formcontrol input,
+  .formcontrol select {
+    font-family: "Rubik",sans-serif;;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 97%;
+    margin: auto;
+  }
+  
+  
+  
+  .formcontrol input:focus {
+    outline: none;
+    border-color: #240370;
+    background-color: #e0d4fd;
+  }
+  
+  .controlgroup {
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  
+
+  
+  .invalid input {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+  }
+  
+  .invalid input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+  }
+  
+  .errortext {
+    color: #b40e0e;
+    font-size: 0.8rem;
+    line-height: 0px;
+  
+  }
+  
+  .formactions{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formactions .back{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    background: #ffffff;
+    box-shadow: 0 2px 4px -2px rgba(47, 47, 47, 0.8);
+    border-radius: 4px;
+    transition: .2s;
+    border: 1px solid transparent;
+    color: #000000;
+    font-family: "Rubik",sans-serif;
+    font-weight: 500;
+    line-height: 0;
+    margin-top: 0rem;
+    white-space: nowrap;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  .formactions .back:hover{
+    background-color:#f1f1f1;;
+    transition: 0.3s;
+    border: #5f5f5f solid 1px;
+  
+  }
+  
+  .formactions .continue{
+    display: flex;
+    text-decoration: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #5151ff;
+    background: #007aff;
+    box-shadow: 0 2px 4px -2px rgba(0,122,255,0.8);
+    border-radius: 4px;
+    transition: .2s;
+    border: 1px solid transparent;
+    color: #fff;
+    font-family: "Rubik",sans-serif;
+    font-weight: 500;
+    line-height: 0;
+    margin-top: 0rem;
+    white-space: nowrap;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-bottom: 25px;
+  
+  }
+  
+  
+  .formactions .back:hover{
+    background-color:#f1f1f1;;
+    transition: 0.3s;
+    border: #5f5f5f solid 1px;
+  
+  }
+  
+  
+  
+  .formactions .continue img{ 
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+  }
+  
+  .formactions .back img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    
+  }
+  
+  .ship h3{
+    font-size: 1rem;
+    font-family: "Rubik",sans-serif;
+    color: rgb(92, 92, 92);
+    font-weight: 500;
+  }
+  
+   .ship img{
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+   .ship{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-self: center;
+    
+  }
+  
+.formactions button {
+    height: 33.6px;
+    font-family: "Rubik",sans-serif;
+    background-color: #007AFF;
+    color: white;
+    box-shadow: 0 2px 4px -2px #47a0ff;
+    font-size: 1rem;
+  
+    border: 1px solid #47a0ff;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    margin-right: 0px;
+  }
+
+.formactions button:active {
+    background-color: #007AFF;
+  }
+  
+  .formactions
+  button:disabled{
+    background-color: #ccc;
+    box-shadow: 0 2px 4px -2px rgba(47, 47, 47, 0.8);
+  
+    color: #292929;
+    border-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  
+  

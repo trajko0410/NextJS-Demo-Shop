@@ -1,0 +1,37 @@
+.cartContainer svg:hover{
+  fill: #1463f3;
+  transition: all 0.3s;
+}
+
+.cartContainer{
+  margin-top: -25px;
+}
+
+.cartIcon{
+  position: absolute;
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 900px){
+  .cartIcon{
+    padding-top: 43px;
+
+
+  }}
+
+.svgNotActive svg{
+  fill: white
+}
+.svgActive svg{
+  fill: #1463f3;
+}
+
+.svgContainer{
+  margin-left:12px 
+}
+
+.numberCart{
+    position:relative;
+    top: -12px;
+    left: 28px
+  }

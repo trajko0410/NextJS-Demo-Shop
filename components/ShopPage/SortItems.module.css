@@ -1,0 +1,59 @@
+.bacgroundColor{
+  max-width: 1960px;
+
+  margin: auto;  display: flex;
+  justify-content: center;
+}
+.container{
+  background-color: #1D2023;
+
+
+}
+
+div .bacgroundColor ul {
+  display: flex;
+  width:80%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 767px){
+  div .bacgroundColor ul{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+div .bacgroundColor ul li{
+  font-family: "Rubik",sans-serif;
+  color: white;
+  width: 20%;
+  display: flex;
+  font-weight: 400;
+  line-height: 2;
+  justify-content: center;
+}
+@media only screen and (max-width: 767px){
+  div .bacgroundColor ul li{
+    width: 100%;
+  }
+}
+
+
+div .bacgroundColor ul:hover li{
+  color: rgb(144, 144, 144);
+  transition-duration: 0.3s;
+}
+
+div .bacgroundColor ul li:hover{
+  color: white;
+  transition-duration: 0.3s;
+
+
+}
+.active {
+  background-color: rgb(5, 5, 5);
+
+}

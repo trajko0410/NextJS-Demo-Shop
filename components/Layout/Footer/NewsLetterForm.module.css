@@ -1,0 +1,36 @@
+
+.newsletter{
+display: flex;
+justify-content: center;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+.newsletter input,
+.newsletter button {
+  font-family:'Bebas Neue', sans-serif;
+  border-radius: 0;
+  border: none;
+  height: 30px;
+  width: 200px;
+}
+
+.newsletter button {
+  font-family:'Bebas Neue', sans-serif;
+
+  cursor: pointer;
+  width: 60px;
+  height: 32px;
+  background-color: #007aff;
+  border: none;
+  margin: none;
+  padding: none;
+  color: white;
+  
+}
+
+.newsletter button:hover {
+  color: white;
+  background-color: black;
+  
+}

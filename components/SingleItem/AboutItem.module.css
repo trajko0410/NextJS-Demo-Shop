@@ -1,0 +1,110 @@
+.container{
+  padding-top: 3rem;
+  max-width: 1960px;
+  margin: auto;
+}
+
+.aboutItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  gap: 20px;
+
+}
+
+.aboutItem .img{
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px){
+  .aboutItem .img{
+    margin-bottom: 120px;
+  }
+  div .aboutItem{
+    flex-direction: column;
+  }
+
+  div .aboutItem .img{
+    justify-self: center;
+    width: 100%;
+    height: 380px;
+    
+  }
+
+  div .aboutItem .textData{
+    justify-content: center;
+  }
+  div .aboutItem .img img{
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+div .aboutItem .img{
+  display: flex;
+  justify-content: top;
+  flex-direction: column;
+}
+div .aboutItem .img img{
+  width: 300px;
+  height: 300px;
+}
+
+div .aboutItem .textData{
+  font-family: "Rubik",sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  div .aboutItem .textData{
+
+    width: 60%;
+}
+
+div .aboutItem .img img{
+  width: 300px;
+  height: 300px;
+
+}
+
+}
+
+
+@media only screen and (min-width: 1000px){
+  div .aboutItem .textData{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 50%;
+
+
+  }
+  div .aboutItem .img img{
+    width: 400px;
+    height: 400px;
+
+  }
+}
+
+div .aboutItem .textData .name{
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom:0rem ;
+}
+
+div .aboutItem .textData .shortDescription{
+  font-weight: 400;
+  color: rgb(161, 161, 161);
+  font-size: 0.8rem;
+}
+
+div .aboutItem .textData .memory_color h3{
+  margin-top: 3rem;
+  font-weight: 400;
+  color: rgb(92, 92, 92);
+  font-size: 0.9rem;
+}

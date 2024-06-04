@@ -1,0 +1,86 @@
+
+
+.container{
+  max-width: 1960px;
+  margin: auto;
+}
+
+.item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+  gap: 30px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 806px){
+ .item{
+  justify-content: center;
+ }
+  }
+
+
+  .error{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error h4{
+    margin-top: 40px;
+  }
+  
+  .error img{
+    height: 100px;
+    width: 100px;
+   
+  }
+  
+  .imgContainer{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 0, 0, 0.391);
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  
+@media only screen and (min-width: 1024px){
+  
+  .itemsContainer .items{
+    width: 90%;
+  }
+  
+  .itemsContainer{
+    display: flex;
+    justify-content: center;
+  
+  }
+  }
+  
+  @media only screen and (max-width: 806px){
+    
+    .itemsContainer .items{
+      width: 100%;
+    
+    }
+    
+    .itemsContainer{
+      display: flex;
+      justify-content: center;
+    
+    }
+    }

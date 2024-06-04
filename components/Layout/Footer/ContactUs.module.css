@@ -1,0 +1,28 @@
+.info{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  
+ 
+}
+
+.info h3{
+  font-family:'Bebas Neue', sans-serif;
+  color: rgb(190, 190, 190);
+  font-size: 1.5rem;
+  margin-top: 0;
+
+}
+
+ .info ul{
+  font-family:'Bebas Neue', sans-serif;
+  font-size: 0.6rem;
+  color: rgb(190, 190, 190);
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 700px){
+  .info{ justify-content: center; width: 100%; }
+  .info h3{text-align: center;}
+  .info ul{text-align: center;}
+}

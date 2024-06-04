@@ -1,0 +1,48 @@
+.backgroundCircle button{
+  text-decoration: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundCircle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color:#47a0ff;
+  border: #47a0ff solid 1px;
+    box-shadow: 0 2px 4px -2px rgba(0,122,255,0.8);
+
+}
+ .active{
+  background-color: #007AFF;
+}
+
+
+
+.notactive{
+  background-color: whitesmoke;
+}
+
+
+
+
+.line{
+  width: 100px;
+  height: 2px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23007AFFFF' stroke-width='5' stroke-dasharray='5%2c 15' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+  
+  
+}

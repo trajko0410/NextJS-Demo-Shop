@@ -1,0 +1,52 @@
+.container{
+  width: 90%;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+ .recomended h2{
+  margin-top: 6rem ;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+.slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width:1260px;
+  margin: auto;}
+
+.slider .left{
+  margin-left: 10px;
+  padding:10px;
+  line-height: 0;
+
+  
+}
+
+.left img{
+  rotate: 180deg;
+  height: 50px;
+  width: 50px;
+
+}
+
+.slider .right{
+  line-height: 0;
+  margin-right: 10px;
+  padding: 10px;
+
+}
+
+.right img{
+  height: 50px;
+  width: 50px;
+}

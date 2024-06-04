@@ -1,0 +1,79 @@
+.mainContainer{
+  background-color:  #1d2023;
+  margin-top: auto;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer{
+  max-width: 1960px;
+  margin-top: auto;
+  margin: auto;
+  padding-left: 1REM;
+  padding-right: 1REM;
+  padding-top: 1rem;
+  display: flex;
+}
+
+
+.container{display: flex ;width: 100%; align-items: center; justify-content:space-between; }
+
+
+@media (max-width: 700px){
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .smnwContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.logo{
+  position: relative;
+  display: flex;
+  width: 33%;
+  height: 60px;
+  justify-content: center;
+}
+.logo img{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer a{
+
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 0.6rem;
+}
+
+.credential{
+  background-color: black;
+  padding: 0.4rem;
+  border-top: rgb(48, 48, 48) 1px solid;
+}
+
+.credential p{
+  font-family: 'Victor Mono', monospace;
+  font-size: 0.6rem;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin: 0;
+}
+
+.smnwContainer{
+  width: 33%;
+  
+}
+

@@ -1,0 +1,30 @@
+.img_background {
+  background-image: url(../../public/images/shopPageHeroSection/vecteezy_abstract-background-of-a-space-sky-with-nebula-and-stars_25065812_256.jpg);
+  
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  padding-top: 10px;
+  box-shadow: 100px -25px 100px px rgba(8, 8, 88, 0.369) inset;
+}
+
+.img_background .back_drop{
+  height: 600px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.434);
+}
+
+.img_background h1{
+  color: white;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}

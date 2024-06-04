@@ -1,0 +1,44 @@
+.colors{
+  display: flex;
+  margin-top: 2rem;
+gap: 20px;  border: transparent solid 1px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.colors .color{
+  display: flex;
+  font-size: 0.8rem;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 1px rgba(0, 0, 0, 0.285);
+  height: 100px;
+  border: transparent solid 1px;
+  width: calc(33.3333% - 16px);
+}
+
+.colors .color .innercolor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.color .innercolor .boja{
+  margin-top: 10px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background: silver;
+  box-shadow: inset 1px 0px 3px #0000004a,
+              inset 0px 0px 3px #00000039;
+}
+
+.color:not(.colors .active) div:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 2px rgb(0, 0, 0);
+}
+
+
+.colors .active{
+  border: #007aff solid 1px;
+  box-shadow: 0 4px 8px -2px rgba(0,87,182,0.32) ;}

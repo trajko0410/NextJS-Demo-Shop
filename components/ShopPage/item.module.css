@@ -1,0 +1,94 @@
+.container{
+  display: flex;
+  width: 48%;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  
+}
+
+div .wrappingItem {
+  width:100%;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 1px rgba(0,0,0,0.2);
+  display: flex;
+  border-radius: 15px;
+  height: auto;
+}
+
+
+.productImage {
+  position: relative;
+  
+  height: 150px;
+  width: 150px;
+  margin-right: 10px;
+  border-radius: 15px;
+
+}
+
+div .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  font-family: "Rubik",sans-serif;
+  font-size: 1rem;
+  margin-left: 2rem;
+  word-break:keep-all;
+  
+}
+
+div .text h3{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+}
+
+div .text p{
+  color: dimgray;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+div .text button {
+  font-weight: 500;
+  width: fit-content;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  font-size: 0.6;
+  background-color: white;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color:  black;
+  border-style: solid;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+div .container:hover button{
+  background: #007aff;
+  border-width: 1px;
+  border-color:  #007aff;
+  border-style: solid;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+div .container:hover{
+  box-shadow: 0 20px 20px rgba(0,0,0,0.09),0 0 1px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.notActive{
+  display: none;
+}
+
+@media only screen and (max-width: 806px){
+  .container{
+    width: 100%;
+    justify-content: center;
+  }
+  }

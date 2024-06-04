@@ -1,0 +1,86 @@
+.img_background {
+  background-image: url(../../public/images/homePageBacgroundImage/1920-milky-way-galaxy-with-stars-and-space-dust-in-the-universe.jpg);
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  padding-top: 10px;
+  box-shadow: 0px -15px 25px 0px rgba(4, 0, 25, 0.752) inset;
+}
+
+.container{
+  width: 1920px;
+  margin: auto;
+}
+
+.mainHeader {
+  color: white;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.mainHeader .button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  letter-spacing: 0,8;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.mainHeader .button:hover{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  background-color: transparent;
+  color: #1463f3;
+  border-color: white;
+  border-style: solid;
+  transition-duration: 0.3s;
+  background-color: whitesmoke;
+  border-width: 2px;
+  letter-spacing: 0,8;
+  text-decoration: none;
+}
+
+
+
+.textfocusin {
+	-webkit-animation: textfocusin 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: textfocusin 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes textfocusin {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes textfocusin {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
