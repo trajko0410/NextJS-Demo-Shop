@@ -75,13 +75,16 @@ nav .hamburgerMenuActive span{
   .menuUndefined{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
   }
 
   .personal{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 200px;
+    width: 26%;
+
 
   }
   .personal ul{
@@ -101,29 +104,34 @@ nav .hamburgerMenuActive span{
   .containeraroundlinks{
   display: flex;
   flex-direction: row;
-}
+  width: 100%;
+  }
 
-.navigation{
-  width: 200px;
-  margin-right: 160px;
-  margin-left: 160px;
-}
+  .navigation{
+  display: flex;
+  width: 74%;
+  align-items: center;
+  justify-content: center;
+  }
 
-.numberCart{
+  .navigation li{
+  margin-left: 19px;
+  margin-right: 13px;
+  }
+
+  .numberCart{
   position:relative;
   top: -12px;
   left: 18px
-}
+  }
 }
 
 @media only screen and (max-width: 900px){
 
 
   .containeraroundlinks{
-  
     margin-top: 325px;
     height: 210px;
-
     width: 100%;
     background-color:  #252527;
     padding: 20px;
@@ -141,7 +149,6 @@ nav .hamburgerMenuActive span{
  
   .containeraroundlinksMenuOpen{
     background-color: rebeccapurple;
-
     z-index: 1;
     margin-top: 325px;
     height: 210px;
@@ -173,17 +180,14 @@ nav .hamburgerMenuActive span{
     flex-direction: column;
   }
 
-
   .numberCart{
     position:relative;
     top: -12px;
     left: 26px
   }
-
 }
 
 @keyframes slide-in-top {
-
   0% {
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
@@ -206,13 +210,7 @@ nav .hamburgerMenuActive span{
             transform-origin: 100% 0%;
     opacity: 1;
   }
-
   }
-
- 
- 
-
-
 
 @keyframes slide-in-reverse {
   0% {
@@ -227,12 +225,9 @@ nav .hamburgerMenuActive span{
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
-
   80%{
     opacity:  0.15;
    }
-
- 
   100% {
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
@@ -240,15 +235,12 @@ nav .hamburgerMenuActive span{
             transform-origin: 100% 0%;
     opacity: 0;
   }
-
 }
-
-
 
 .logo{
   display: flex;
   justify-content: space-evenly;
-  width: 100px;
+  width: 25%;
 }
 
 
@@ -262,10 +254,7 @@ nav .hamburgerMenuActive span{
   height: 100vh;
   background-color: #00000082;
   backdrop-filter: blur(3px);
- 
-
 }
-
 
 .overlayUndefined{
   display: none;
@@ -273,13 +262,11 @@ nav .hamburgerMenuActive span{
 
 .overlayOpen{
   position: fixed;
-
 }
 
 .overlayClose{
   animation: fadeOut 1s forwards;
   position: fixed;
-
 }
 
 @keyframes fadeOut {
@@ -287,10 +274,6 @@ nav .hamburgerMenuActive span{
   to { opacity: 0;
   display: none; }
 }
-
-
-
-
 
 @keyframes shake {
     from {
@@ -317,16 +300,8 @@ nav .hamburgerMenuActive span{
   to{
     transform: scale(1);
   }
-
-
- 
- 
- 
- 
- 
- 
 }
 
 .shake {
-  animation: shake 2.5s ease-in-out both;}
-
+  animation: shake 2.5s ease-in-out both;
+}

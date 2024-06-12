@@ -20,7 +20,7 @@ async function handler(req, res) {
     const customerZip = shippingInfo.zip;
     const customerPhone = shippingInfo.phone;
 
-    console.log(shippingInfo);
+    //console.log(shippingInfo);
 
     if (!customerEmail || !customerEmail.includes("@")) {
       res.status(422).json({
@@ -46,7 +46,7 @@ async function handler(req, res) {
     }
   }
 
-  if (orderInfo.length <= 0) {
+  if (orderInfo === undefined || orderInfo.length <= 0) {
     res.status(404).json({
       message:
         "It seams your order was empty. Please add item to a cart before subbmitting an order.",

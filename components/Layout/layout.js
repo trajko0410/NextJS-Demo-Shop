@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Navigation from "../Layout/mainNavigation";
+import Navigation from "./mainNavigation";
 import Footer from "./Footer/Footer";
 
 function Layout(props) {

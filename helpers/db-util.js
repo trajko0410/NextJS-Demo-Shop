@@ -1,7 +1,8 @@
 export async function getAllItems() {
-  const response = await fetch(
-    "THIS IS WHERE YOU NEED TO ENTER YOUR FIREBASE DATABASE. YOU CAN CHECK A PHOTO HOW DATABASE SHOULD LOOK LIKE"
-  );
+  const firebaseCredentials = process.env.FIREBASECREDENTIALS;
+  console.log(firebaseCredentials);
+  const response = await fetch(firebaseCredentials);
+  console.log(response);
 
   const data = await response.json();
   //console.log(data);

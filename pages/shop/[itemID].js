@@ -23,6 +23,7 @@ export async function getStaticProps(context) {
     props: {
       selectedItem: itemData,
     },
+    revalidate: 360,
   };
 }
 
@@ -38,3 +39,5 @@ export async function getStaticPaths() {
     fallback: "blocking",
   };
 }
+
+//consideer changin to get server side props

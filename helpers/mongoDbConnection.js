@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
 
 export async function connectToMongoDbDatabase() {
-  const client = await MongoClient.connect(
-    "ENTER YOUR MONGODB CREDENTIALS TO CONECT TO YOUR DATABASE"
-  );
+  const mongodbCredentials = process.env.MONGODBDATABASECREDENTIALS;
+  //console.log(mongodbCredentials);
+  const client = await MongoClient.connect(mongodbCredentials);
 
   return client;
 }
