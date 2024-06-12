@@ -1,15 +1,10 @@
-.swiperContainer{
-  width: 70%;
-  justify-content: center;
-  background-color: red;
-  margin: auto;
-  padding: 20px;
-}
+
 
 .container{
   font-family: "Rubik",sans-serif;
+  cursor: pointer;
 
-  background-color: white;
+  background-color: rgb(254, 254, 254);
   border-radius: 15px;
   width: 100%;
   box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 1px rgba(0,0,0,0.2);

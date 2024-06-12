@@ -32,7 +32,7 @@ function SuccesModal(props) {
 
   //console.log(responseData, "responseDaata");
 
-  if (!responseData) {
+  if (props.isLoading) {
     return (
       <>
         {createPortal(

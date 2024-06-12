@@ -1,5 +1,6 @@
 import {
   connectToMongoDbDatabase,
+  existingEmail,
   insertDataInDatabase,
 } from "../../helpers/mongoDbConnection";
 
@@ -20,6 +21,27 @@ async function handler(req, res) {
       res
         .status(500)
         .json({ message: "Connecting to the database failed!", status: 500 });
+      return;
+    }
+
+    try {
+      const doesItExist = await existingEmail(client, "NewsLetter", {
+        email: userEmail,
+      });
+      if (doesItExist === null) {
+        console.log("nepostoji");
+      } else {
+        res
+          .status(422)
+          .json({ message: "You are already subscribed to our newsletter." });
+        client.close();
+        return;
+      }
+
+      //console.log(doesItExist, "dalipostoji");
+    } catch (error) {
+      res.status(500).json({ message: "Checking email failed!", status: 500 });
+      //console.log(error, "greska");
       return;
     }
 

@@ -3,8 +3,11 @@
   transition: all 0.3s;
 }
 
+
+
 .cartContainer{
   margin-top: -25px;
+  cursor: pointer;
 }
 
 .cartIcon{

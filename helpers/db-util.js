@@ -1,8 +1,8 @@
 export async function getAllItems() {
   const firebaseCredentials = process.env.FIREBASECREDENTIALS;
-  console.log(firebaseCredentials);
+  //console.log(firebaseCredentials);
   const response = await fetch(firebaseCredentials);
-  console.log(response);
+  //console.log(response);
 
   const data = await response.json();
   //console.log(data);

@@ -10,16 +10,19 @@ function NewsletterForm() {
 
   const [newsletterNotification, setNewsletterNotification] = useState(false);
   const [responseData, setResponseData] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   //console.log(newsletterNotification, "parent");
 
   const emailInputRef = useRef();
 
-  function registrationHandler(event) {
+  async function registrationHandler(event) {
     event.preventDefault();
     const enteredEmail = emailInputRef.current.value;
+    setIsLoading(true);
+    setNewsletterNotification(true);
 
-    fetch("/api/newsletter", {
+    await fetch("/api/newsletter", {
       method: "POST",
       body: JSON.stringify({ email: enteredEmail }),
       headers: {
@@ -28,8 +31,8 @@ function NewsletterForm() {
     })
       .then((response) => response.json()) //getting acces to respnse
       .then((data) => setResponseData(data));
+    setIsLoading(false);
 
-    setNewsletterNotification(true);
     emailInputRef.current.value = "";
   }
 
@@ -58,6 +61,7 @@ function NewsletterForm() {
           modalState={newsletterNotification}
           modalStateFromChild={modalStateFromChild}
           typeofmodal={"NEWSLETTER"}
+          isLoading={isLoading}
         />
       )}
     </>

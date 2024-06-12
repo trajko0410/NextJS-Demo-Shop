@@ -14,3 +14,15 @@ export async function insertDataInDatabase(client, collection, data) {
   const result = await db.collection(collection).insertOne(data);
   return result;
 }
+
+export async function existingEmail(client, collection, data) {
+  const db = client.db();
+
+  const existingEmail = await db
+    .collection(collection)
+    .findOne({ email: data.email });
+
+  //console.log(existingEmail, "mongodb");
+
+  return existingEmail;
+}

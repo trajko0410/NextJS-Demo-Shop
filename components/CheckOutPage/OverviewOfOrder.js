@@ -34,6 +34,8 @@ function OverviwOfOrder(props) {
 
   const [newsletterNotification, setNewsletterNotification] = useState(false);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const shipping = props.shippingInfo;
   const timestamp = new Date().toISOString();
   //console.log(timestamp);
@@ -56,10 +58,11 @@ function OverviwOfOrder(props) {
 
   //console.log(shippingData, "posled");
 
-  function addOrderToServer(event) {
+  async function addOrderToServer() {
     //event.preventDefault();
-
-    fetch("/api/order", {
+    setIsLoading(true);
+    setNewsletterNotification(true);
+    await fetch("/api/order", {
       method: "POST",
       body: JSON.stringify({
         orderedItems: items,
@@ -72,7 +75,7 @@ function OverviwOfOrder(props) {
     })
       .then((response) => response.json()) //getting acces to respnse
       .then((data) => setResponseData(data));
-    setNewsletterNotification(true);
+    setIsLoading(false);
   }
   //console.log(responseData);
 
@@ -213,6 +216,7 @@ function OverviwOfOrder(props) {
             modalStateFromChild={modalStateFromChild}
             modalState={newsletterNotification}
             typeofmodal={"ORDER"}
+            isLoading={isLoading}
           />
         )}
       </Suspense>

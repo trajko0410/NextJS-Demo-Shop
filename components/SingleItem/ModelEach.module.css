@@ -19,6 +19,7 @@
   padding-bottom: 0.6rem;
   border: transparent solid 1px;
   width: calc(33.33333% - 16px);
+  cursor: pointer;
 }
 
 .memory .modelEach .memory{

@@ -63,6 +63,10 @@ nav .hamburgerMenuActive span{
 .personal{
   margin-right: 6px;
 }
+.menuUndefined{
+  display: none;
+}
+
 
 
 @media only screen and (min-width: 900px){
@@ -124,9 +128,41 @@ nav .hamburgerMenuActive span{
   top: -12px;
   left: 18px
   }
+  
+}
+
+@media only screen and (max-width: 650px){
+  .logo{
+    margin-left: 80px;
+    margin-right: -80px;
+  ;}
+  
+  .hamburgerMenu{
+    display: flex;
+    margin-left: -50px;
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 650px){
+  .hamburgerMenu{
+    display: flex;
+    margin-left: 60px;
+    margin-right: -40px;
+  }
+  .logo{
+    margin-left: -60px;
+    margin-right: 40px;
+  ;}
+
 }
 
 @media only screen and (max-width: 900px){
+  .header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 
 
   .containeraroundlinks{
@@ -139,14 +175,7 @@ nav .hamburgerMenuActive span{
     animation: slide-in-reverse 0.5s ease-in-out forwards;
     z-index: 1;
   }
-  .menuUndefined{
-    display: none;
-  }
 
-  .hamburgerMenu{
-    display: flex;
-  }
- 
   .containeraroundlinksMenuOpen{
     background-color: rebeccapurple;
     z-index: 1;
@@ -270,9 +299,10 @@ nav .hamburgerMenuActive span{
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
+  from { opacity: 1;position: fixed; }
   to { opacity: 0;
-  display: none; }
+  display: none;
+z-index: -5; }
 }
 
 @keyframes shake {
