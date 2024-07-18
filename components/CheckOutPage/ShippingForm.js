@@ -10,9 +10,24 @@ import freeImage from "../../public/images/icons/free.png";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+import { useSession } from "next-auth/react";
+
 function ShipingForm(props) {
+  const session = useSession();
   const [personData, setPersonData] = useState({});
   const [ok, setOk] = useState(false);
+
+  const [initialName, setInitialName] = useState("");
+  const [initialEmail, setInitialEmail] = useState("");
+
+  useEffect(() => {
+    if (session.status === "authenticated") {
+      setInitialName(session.data.user.name);
+      setInitialEmail(session.data.user.email);
+    }
+    return;
+  }, [session]);
+
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -20,7 +35,9 @@ function ShipingForm(props) {
     enteredValueChangeHandler: nameChangeHandler,
     inputBlurHandler: nameBlurHandler,
     resetValue: resetNameInput,
-  } = useInput((value) => value.trim() !== "" && value.length > 2); //ovo dobija hook kao proveru
+  } = useInput((value) => value.trim() !== "" && value.length > 2, initialName); //ovo dobija hook kao proveru
+  console.log(enteredName, "entered");
+  console.log(initialName, "sesionname");
 
   const {
     value: enteredEmail,
@@ -29,7 +46,10 @@ function ShipingForm(props) {
     enteredValueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     resetValue: resetEmailInput,
-  } = useInput((value) => value.includes("@") && value.trim() !== "");
+  } = useInput(
+    (value) => value.includes("@") && value.trim() !== "",
+    initialEmail
+  );
 
   const {
     value: enteredAddress,

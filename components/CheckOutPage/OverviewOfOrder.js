@@ -57,6 +57,7 @@ function OverviwOfOrder(props) {
   //const [error, setError] = useState(null);
 
   //console.log(shippingData, "posled");
+  //console.log(total);
 
   async function addOrderToServer() {
     //event.preventDefault();
@@ -69,6 +70,7 @@ function OverviwOfOrder(props) {
         shippingInfo: shippingData,
         timeStamp: timestamp,
       }),
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },

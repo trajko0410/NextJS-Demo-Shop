@@ -15,7 +15,7 @@ function Banner() {
           <div className={style.icons}>
             <div className={style.iconInfo}>
               <div className={style.image}>
-                <Image src={shipping} alt="shipping" fill></Image>{" "}
+                <Image src={shipping} alt="shipping" fill></Image>
               </div>
 
               <h2>Fast delivery</h2>

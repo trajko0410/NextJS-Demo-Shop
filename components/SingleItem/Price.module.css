@@ -1,19 +1,62 @@
 .price{
-  width: 100%;  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
 }
 
-.price h3{
+.priceNotLogIN{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+.discount{
+  margin-top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #56a8ff;;
+  font-size: 1rem;
+  font-weight: 400;
+
+
+}
+
+.discountedPrice{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color:black;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  border-top: 1px solid rgb(222, 222, 222);
+}
+
+.container h3{
   font-weight: 400;
   color: rgb(92, 92, 92);
   font-size: 0.9rem;
 }
 
-.price .priceInner{
+.container .priceInner{
   font-weight: 400;
   color: rgb(0, 0, 0);
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.discountedContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  width: 100%; 
+  margin-top: 2rem;
+
 }

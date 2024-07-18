@@ -28,9 +28,7 @@ async function handler(req, res) {
       const doesItExist = await existingEmail(client, "NewsLetter", {
         email: userEmail,
       });
-      if (doesItExist === null) {
-        console.log("nepostoji");
-      } else {
+      if (doesItExist !== null) {
         res
           .status(422)
           .json({ message: "You are already subscribed to our newsletter." });

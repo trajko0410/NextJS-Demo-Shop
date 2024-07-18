@@ -11,9 +11,13 @@ import { useState, useEffect } from "react";
 import Cart from "../Cart/Cart";
 import CartIcon from "../Cart/CartIcon";
 
+import SignOutModal from "../Modals/SignOutModal";
+
 import useWindowSize from "../Hooks/useWindowSize";
+import { useSession } from "next-auth/react";
 
 function MainNavigation() {
+  const session = useSession();
   const router = useRouter();
   const isActive = (href) => router.pathname === href;
 
@@ -21,6 +25,9 @@ function MainNavigation() {
   const [cartItemsLenght, setCartItems] = useState(0);
 
   const [isShaking, setIsShaking] = useState(false);
+  const [signOutModal, setSignOutModal] = useState(false);
+
+  //console.log(session, "header");
 
   useEffect(() => {
     if (cartItemsLenght > 0) {
@@ -51,6 +58,12 @@ function MainNavigation() {
     setMenuOpen(!menuOpen);
   }
 
+  function signOutModalHandler() {
+    setSignOutModal(!signOutModal);
+  }
+
+  //console.log(signOutModal, "signoOut from nav");
+
   function closeMenuHandler() {
     if (size.width > 900) {
       setMenuOpen(undefined);
@@ -62,6 +75,10 @@ function MainNavigation() {
   const totalCartItems = (totalCartItems) => {
     setCartItems(totalCartItems);
   }; //dobili smo tako sto smo slali od dole
+
+  const modalStateFromChild = (modalStateFromChild) => {
+    setSignOutModal(modalStateFromChild);
+  };
 
   //console.log(cartItemsLenght, "treba");
 
@@ -103,15 +120,34 @@ function MainNavigation() {
           <div className={style.personal}>
             <ul>
               <li>
-                <Link
-                  href="/login"
-                  className={style.login}
-                  onClick={closeMenuHandler}
-                >
-                  <h3 className={isActive("/login") ? style.active : ""}>
-                    logIn
-                  </h3>
-                </Link>
+                {session.status === "authenticated" && (
+                  <div
+                    href="/"
+                    className={style.login}
+                    onClick={() => {
+                      closeMenuHandler();
+                      signOutModalHandler();
+                    }}
+                  >
+                    <h3 className={signOutModal ? style.active : ""}>
+                      Log Out
+                    </h3>
+                    {signOutModal && (
+                      <SignOutModal modalStateFromChild={modalStateFromChild} />
+                    )}
+                  </div>
+                )}
+                {session.status !== "authenticated" && (
+                  <Link
+                    href="/login"
+                    className={style.login}
+                    onClick={closeMenuHandler}
+                  >
+                    <h3 className={isActive("/login") ? style.active : ""}>
+                      Log In
+                    </h3>
+                  </Link>
+                )}
               </li>
               <li className={isShaking ? style.shake : ""}>
                 <CartIcon

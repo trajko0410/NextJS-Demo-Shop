@@ -1,11 +1,13 @@
 .mainContainer{
   background-color:  #1d2023;
   margin-top: auto;
+  
   width: 100%;
   z-index: 1000;
 }
 
 .footer{
+  
   max-width: 1960px;
   margin-top: auto;
   margin: auto;

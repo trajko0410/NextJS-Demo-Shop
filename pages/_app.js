@@ -2,6 +2,8 @@ import Layout from "../components/Layout/layout";
 import { ShopContextProvider } from "../context/cartContextProvider";
 import globalCSS from "../styles/global.css";
 
+import { SessionProvider } from "next-auth/react";
+
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
@@ -19,12 +21,13 @@ export default function App({ Component, pageProps }) {
           content="demo-shop-nextjs\public\favicon.png"
         />
       </Head>
-
-      <ShopContextProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ShopContextProvider>
+      <SessionProvider>
+        <ShopContextProvider session={pageProps.session}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ShopContextProvider>
+      </SessionProvider>
     </>
   );
 }

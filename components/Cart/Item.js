@@ -1,9 +1,17 @@
 import style from "./Item.module.css";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
+import { CalculatePercentage } from "../../helpers/discauntCalculation";
 
 function Item(props) {
+  const session = useSession();
   const item = props.item;
   //console.log(price);
+
+  const price = item.itemPrice;
+  const discount = CalculatePercentage(price, 0.1);
+  const discountedPrice = price - discount;
+  const formatedDiscountedPrice = discountedPrice.toFixed(2);
 
   return (
     <div key={item.id} className={style.item}>
@@ -39,7 +47,11 @@ function Item(props) {
           </div>
 
           <div className={style.priceDolar}>
-            <h4>{item.itemPrice}$</h4>
+            {session.status === "unauthenticated" ? (
+              <h4>{price} $</h4>
+            ) : (
+              <h4>{formatedDiscountedPrice} $</h4>
+            )}
           </div>
         </div>
       </div>

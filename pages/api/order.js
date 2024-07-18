@@ -3,15 +3,33 @@ import {
   insertDataInDatabase,
 } from "../../helpers/mongoDbConnection";
 
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "./auth/[...nextauth]";
+
 async function handler(req, res) {
+  //const session = await getSession({ req });
+  //console.log("cookies", req.headers.cookie);
+  const session = await getServerSession(req, res, authOptions);
+  //ensure you set env file
+  //console.log(session, "Ses");
+
   let shippingInfo;
   let orderInfo;
   let timeOfOrder;
+
+  let autUser;
+  let totalSum = 0;
+  let totalDiscount = 0;
+  let result = [];
+
+  console.log(session, "sredi sisiju da ima i name"); //name treba srediti u sesiji
 
   if (req.method === "POST") {
     timeOfOrder = req.body.timeStamp;
     orderInfo = req.body.orderedItems;
     shippingInfo = req.body.shippingInfo;
+
+    //console.log(orderInfo);
 
     const customerName = shippingInfo.name;
     const customerEmail = shippingInfo.email;
@@ -53,7 +71,13 @@ async function handler(req, res) {
       status: 404,
     });
     return;
-  }
+  } else {
+    result = orderInfo.map((item) => {
+      const totalPrice = item.itemPrice * item.quantity;
+      totalSum += totalPrice;
+      return { ...item, totalPrice };
+    });
+  } //ovde prolazim kroz order ingo i za svaki racunam ako ima vise komada kolika bi bio total i onda napravim ukupan total ako imamo vise razlicitih proizvoda
 
   if (orderInfo.itemAvailable === true) {
     res.status(404).json({
@@ -76,6 +100,20 @@ async function handler(req, res) {
   });
 
   //console.log("POSTING", body, name, email);
+  //console.log(result, totalSum, "tp");
+
+  if (session) {
+    autUser = true;
+    totalDiscount = totalSum * 0.1;
+    totalDiscount = totalDiscount.toFixed(2);
+    totalSum = totalSum - totalDiscount;
+    totalSum = totalSum.toFixed(2);
+  } else {
+    autUser = false;
+  } //proveravam da li smo loginovali i onda racunam discount
+
+  //console.log(totalSum, totalDiscount, "after sessionb check");
+  //console.log(autUser);
 
   let client;
 
@@ -91,7 +129,9 @@ async function handler(req, res) {
   try {
     await insertDataInDatabase(client, "Orders", {
       shippingInfo: shippingInfo,
-      order: orderInfo,
+      order: result,
+      total: totalSum,
+      discount: { autUser, totalDiscount },
       timeOfOrder: timeOfOrder,
     });
     client.close();
