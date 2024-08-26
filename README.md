@@ -4,9 +4,12 @@ To use this code you will need to set up firebase and mongodb database.
 
 2. To create a connection to Firebase, you will need to enter your credentials in the db-util.js file, which you can find in the helpers folder. Additionally, your Firebase database must follow a specific structure. You can check the structure of the database in the picture named Firebase Structure.png.
 
+3. You will need to follow specific structure for users to. Check mongoDbUsersStructure.png.
+
 <<<<<<< HEAD
 You can check the demo shop by clicking on this link https://next-js-demo-shop-dewb.vercel.app/
 =======
 You can check the demo shop by clicking on this link
 https://next-js-demo-shop-dewb.vercel.app/
->>>>>>> aadd256c7e5e53117929e5778246b46815aa2d5b
+
+> > > > > > > aadd256c7e5e53117929e5778246b46815aa2d5b

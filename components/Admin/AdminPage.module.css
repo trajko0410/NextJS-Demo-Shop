@@ -1,0 +1,71 @@
+.container {
+  max-width: 1920px;
+  margin: auto;
+  margin-top: 8rem;
+}
+
+.container .mainTitle h2{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+
+
+}
+
+.bacgroundColor1{
+  width: 30%;
+  border-radius: 10px;
+  background: #3b8314; 
+  background: linear-gradient(225deg, #54ea43, #2eb127fd);
+}
+.container .bacgroundColor1:hover{
+  box-shadow: 0 4px 15px -2px #54ea43 ;
+}
+
+.bacgroundColor2{
+  width: 30%;
+  border-radius: 10px;
+  background: #1ECAFE;
+  background: linear-gradient(225deg, #1ECAFE, #2416ed);
+}
+.container .bacgroundColor2:hover{
+  box-shadow: 0 4px 15px -2px #1ECAFE ;
+}
+
+.bacgroundColor3{
+  width: 30%;
+  border-radius: 10px;
+  background: #F88D91;
+  background: linear-gradient(225deg, #F88D91, #D33C78);
+}
+.container .bacgroundColor3:hover{
+  box-shadow: 0 4px 15px -2px #F88D91 ;
+}
+
+.navBoxesContainer{
+  margin-top: 4rem;
+  
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 900px){
+  .navBoxesContainer{ 
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    
+  }
+  .bacgroundColor1{
+    width: 90%;
+  }
+
+  .bacgroundColor2{
+    width: 90%;
+  }
+  .bacgroundColor3{
+    width: 90%;
+  }
+}

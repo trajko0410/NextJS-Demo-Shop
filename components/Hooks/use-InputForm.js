@@ -1,27 +1,42 @@
 import { useState, useEffect } from "react";
 
-const useInput = (validatedValue, initialValue = "") => {
+const useInput = (validatedValue, initialValue = "", inputType = "text") => {
   const [enteredValue, setEnteredValue] = useState(initialValue);
   const [isTouched, setIsTouched] = useState(false);
+  const [resetKey, setResetKey] = useState(0); // Key for resetting file input
 
   useEffect(() => {
     setEnteredValue(initialValue);
   }, [initialValue]);
 
-  console.log(enteredValue, "iptuhook");
-
-  const valueIsValid = validatedValue(enteredValue); // validatedvalue dobijamo iy imputa kda prosledio ovaj hook. Tamo gde koristimo ovaj hook proveravamo da li je validno i setujemo funkcije
-
-  const hasError = !valueIsValid && isTouched;
+  const valueIsValid = validatedValue(enteredValue);
+  const hasError = valueIsValid === false && isTouched;
 
   function enteredValueChangeHandler(event) {
-    setEnteredValue(event.target.value);
+    const { type, value, files } = event.target;
+
+    if (type === "file") {
+      setEnteredValue(files[0]);
+      // setExistingPhotoUrl(null); // Assuming single file upload
+    } else {
+      setEnteredValue(value);
+    }
   }
+
   function inputBlurHandler() {
     setIsTouched(true);
   }
+
   function resetValue() {
-    setEnteredValue("");
+    if (inputType === "file") {
+      setEnteredValue(null);
+      setResetKey((prevKey) => prevKey + 1); // Force re-render
+    } else if (initialValue === "iPhones") {
+      // Specific case for itemCategory
+      setEnteredValue("iPhones");
+    } else {
+      setEnteredValue("");
+    }
     setIsTouched(false);
   }
 
@@ -32,6 +47,7 @@ const useInput = (validatedValue, initialValue = "") => {
     enteredValueChangeHandler,
     inputBlurHandler,
     resetValue,
+    resetKey, // Return key for file input
   };
 };
 

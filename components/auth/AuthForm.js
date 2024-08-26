@@ -41,6 +41,8 @@ export default function AuthForm() {
     status: undefined,
   });
 
+  const [hover, setHover] = useState(false);
+
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const nameInputRef = useRef();
@@ -76,7 +78,8 @@ export default function AuthForm() {
         password: enteredPassword,
       });
       if (!result.error) {
-        router.replace("/");
+        //router.replace("/");
+        console.log("logedIn", result);
       }
 
       if (result.error) {
@@ -131,7 +134,25 @@ export default function AuthForm() {
           {session.status !== "loading" && (
             <form onSubmit={submitHandler}>
               <div className={classes.control}>
-                <label htmlFor="email">Your Email</label>
+                <div className={classes.dialogContainer}>
+                  <label htmlFor="email">Your Email</label>
+                  {isLogin && (
+                    <div
+                      onMouseEnter={() => setHover(true)}
+                      onMouseLeave={() => setHover(false)}
+                      className={classes.iContainer}
+                    >
+                      <p>i</p>
+                    </div>
+                  )}
+
+                  {hover && (
+                    <div className={classes.information}>
+                      To log in as an admin, use the following credentials:
+                      Email: admin@gmail.com Password: 111111
+                    </div>
+                  )}
+                </div>
                 <input type="email" id="email" required ref={emailInputRef} />
               </div>
               <div className={classes.control}>

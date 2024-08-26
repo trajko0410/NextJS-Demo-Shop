@@ -5,7 +5,12 @@ import { CalculatePercentage } from "../../helpers/discauntCalculation";
 
 function Price(props) {
   const session = useSession();
-  const price = props.itemPrice;
+  let price = props.itemPrice;
+  if (price === "") {
+    //console.log("prazno");
+    price = props.mainPrice;
+  }
+
   //console.log(price);
   /*
   if (price === null) {

@@ -53,10 +53,25 @@ export const authOptions = {
         //console.log("cred", credentials);
         //console.log(user);
 
-        return { email: user.email, name: user.name };
+        return {
+          email: user.email,
+          name: user.name,
+          role: user.role ?? "user",
+        };
       },
     }),
   ],
+  callbacks: {
+    jwt({ token, user }) {
+      if (user) token.role = user.role;
+      return token;
+    },
+    session({ session, token }) {
+      session.user.role = token.role;
+
+      return session;
+    },
+  },
 };
 
 export default NextAuth(authOptions);

@@ -1,0 +1,374 @@
+.container{
+  margin-top: 8rem;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.container  h2{
+  font-family: "Rubik",sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.formcontrol {
+  margin-bottom: 0.5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  
+}
+
+.formcontrol:has(textarea){
+  height: 100px;
+}
+
+.formcontrol input,
+.formcontrol label {
+  display: block;
+  
+  
+}
+
+.formcontrol input, .formcontrol select, .formcontrol textarea{
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.393);
+}
+
+.formcontrol label {
+  font-size: 1rem;
+  font-family: "Rubik",sans-serif;
+  color: rgb(92, 92, 92);
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.formcontrol input[type=file] {
+  width: 60%;
+  padding-left: 2rem;
+  margin-left: 0rem;
+}
+
+  
+.formcontrol input, .formcontrol textarea {
+    font-family: "Rubik",sans-serif;;
+    border: 1px solid #ccc;
+    margin: auto;
+    width: 100%;
+    margin-bottom: -0.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 4px;
+
+  }
+
+.formcontrol textarea{
+  width: 100%;
+  max-width: 100%;
+  min-height: 20px;
+  min-width: 40%;
+  max-height: 40px;
+  margin-bottom: -0.5rem;
+
+}
+
+
+  .formcontrol select{
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin: auto;
+  }
+
+
+  .dropdown{
+    font-family: "Rubik",sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  
+  .formcontrol input:focus, .formcontrol textarea:focus {
+    outline: none;
+    border-color: #240370;
+    background-color: #e0d4fd;
+  }
+
+  .formcontrol select:focus {
+    outline: none;
+    border-color: #240370;
+  }
+
+
+
+  
+  .controlgroup {
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .invalid input {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+  }
+  
+  .invalid input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+  }
+  
+  .errortext {
+    color: #b40e0e;
+    font-size: 0.7rem;
+    line-height: 10px;
+  
+  }
+
+
+  .containerCheckBox{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: center;
+    margin-top: -1.4rem;
+   
+  }
+  @media only screen and (max-width: 1000px){
+    .containerCheckBox{margin-top: -1rem;}
+  }
+
+
+  @media only screen and (max-width: 550px){
+  
+
+    .wrapperAroundCategoryAndBox{flex-direction: column; width: 100%; margin-left: 0px;
+      margin-right: 0px;}
+    
+
+  .containerCheckBox{
+      margin-top: 0rem;
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+      
+
+
+
+}
+  
+
+  .checkboxWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem; 
+  width: 100%;
+  justify-content: baseline;
+  margin-left: 0px;
+  margin-right: 0px;
+} 
+  
+  .wrapperAroundCategoryAndBox .formcontrol {
+    width: 115%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
+}
+
+.checkboxWrapper{
+  display: flex;
+  align-items: center;
+}
+.containerCheckBox label{
+  font-size: 1rem;
+  font-family: "Rubik",sans-serif;
+  color: rgb(92, 92, 92);
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: 1rem;
+ 
+}
+
+
+
+
+
+  .checkboxWrapper .ikxBAC {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 40px;
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.393);
+
+
+  }
+
+  .checkboxWrapper .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .checkboxWrapper .ikxBAC,
+  .checkboxWrapper .ikxBAC::after {
+    transition: all 100ms ease-out;
+  }
+
+  .checkboxWrapper .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .checkboxWrapper input[type=checkbox] {
+    cursor: default;
+    cursor: pointer;
+
+  }
+
+  .checkboxWrapper .ikxBAC:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .checkboxWrapper .ikxBAC:checked {
+    background-color: #007aff;
+  }
+
+  .checkboxWrapper .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 24px;
+  }
+
+  .checkboxWrapper :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .checkboxWrapper .ikxBAC:checked:hover {
+    background-color: #5151ff;
+  }
+
+.wrapperAroundCategoryAndBox{
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  justify-self: center;
+  margin: auto;
+
+}
+
+.submit{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submitDisabled{
+  width: 80%;
+   margin-left: auto;
+  margin-right: auto;
+}
+
+
+.submit button{
+  display: flex;
+  height: 35px;
+  width: fit-content;
+  text-decoration: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  background: #007aff;
+  box-shadow: 0 2px 4px -2px rgba(0,122,255,0.8);
+  border-radius: 4px;
+  transition: .2s;
+  border: 1px solid transparent;
+  color: #fff;
+  font-family: "Rubik",sans-serif;
+  font-weight: 500;
+  margin-top: 0rem;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+
+  margin-left: auto;
+  margin-top: 2rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+
+  
+
+
+.submitDisabled button{
+  display: flex;
+  height: 35px;
+  width: fit-content;
+  text-decoration: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+
+  border-radius: 4px;
+  transition: .2s;
+  border: 1px solid transparent;
+  
+  font-family: "Rubik",sans-serif;
+  font-weight: 500;
+  margin-top: 0rem;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+
+  margin-left: auto;
+  margin-top: 2rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+
+  background-color: #ccc;
+  box-shadow: 0 2px 4px -2px rgba(47, 47, 47, 0.8);
+
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;}  
+
+  .submitDisabled button:hover{
+    background-color: #e0e0e0;}
+.submit button:hover{
+  background-color:#47a0ff ;
+}
+
+@media only screen and (max-width: 600px){
+  .submit button{
+    width: 100%;
+    justify-content: center;  
+
+  }
+  
+  .submitDisabled button{
+      width: 100%;
+      justify-content: center;  
+  }
+    
+
+}

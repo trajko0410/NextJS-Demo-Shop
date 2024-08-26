@@ -49,6 +49,7 @@ function CheckOutPage() {
     setActiveIndex(activeIndex - 1);
   }
 
+  //console.log(shippingInfo, "INOGO");
   return (
     <div className={style.maincontainer}>
       <OrientalSlider activeIndex={activeIndex} />

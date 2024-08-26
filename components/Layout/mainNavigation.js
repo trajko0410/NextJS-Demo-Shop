@@ -27,8 +27,6 @@ function MainNavigation() {
   const [isShaking, setIsShaking] = useState(false);
   const [signOutModal, setSignOutModal] = useState(false);
 
-  //console.log(session, "header");
-
   useEffect(() => {
     if (cartItemsLenght > 0) {
       setIsShaking(true);
@@ -115,6 +113,15 @@ function MainNavigation() {
                   </h3>
                 </Link>
               </li>
+              {session.data?.user?.role === "admin" && (
+                <li>
+                  <Link href="/admin" onClick={closeMenuHandler}>
+                    <h3 className={isActive("/admin") ? style.active : ""}>
+                      Admin
+                    </h3>
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
           <div className={style.personal}>

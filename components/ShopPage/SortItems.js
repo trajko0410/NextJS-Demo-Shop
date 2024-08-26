@@ -20,7 +20,7 @@ function ItemsNavigation(props) {
     },
     {
       id: 4,
-      value: "Accesesorise",
+      value: "Accessories",
     },
   ];
   //console.log(buttons);

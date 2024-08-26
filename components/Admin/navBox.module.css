@@ -1,0 +1,89 @@
+.container {
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09), 0 0 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative; /* Ensure container is positioned */
+  
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  z-index: 20; /* Ensure it stays above the glassEffect */
+  position: relative; /* Ensure heading is positioned */
+}
+
+.link {
+  text-decoration: none;
+}
+
+.circle1,
+.circle2 {
+  position: absolute;
+  z-index: 5; /* Make sure circles stay behind the glass effect */
+}
+
+.circle1 {
+  height: 200px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.181);
+  clip-path: circle(50% at 50% 50%);
+  left: 80%;
+  top: -30%;
+}
+
+.circle2 {
+  height: 180px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.254);
+  clip-path: circle(50% at 50% 50%);
+  left: 68%;
+  top: 55%;
+}
+
+.glassEffect {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.21);
+  box-shadow: 0 8px 32px 0 rgba(214, 214, 214, 0.74);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.352);
+  z-index: 10; /* Ensure this stays below the heading and text */
+  position: relative; /* Ensure it's correctly layered */
+}
+
+.container h2 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  position: relative;
+  z-index: 20; /* Ensure it stays above the glassEffect */
+}
+
+.container h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  font-weight: 200;
+  color: rgb(241, 241, 241);
+  margin-left: 1rem;
+  z-index: 20; /* Ensure it stays above the glassEffect */
+  position: relative; /* Ensure it's correctly layered */
+  margin-right: 1rem;
+}
+
+.gg {
+  z-index: 20; /* Ensure this is higher than glassEffect's z-index */
+  position: relative; /* Make sure it's properly positioned */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  font-weight: 200;
+  color: rgb(241, 241, 241);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

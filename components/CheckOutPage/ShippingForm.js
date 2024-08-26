@@ -36,8 +36,8 @@ function ShipingForm(props) {
     inputBlurHandler: nameBlurHandler,
     resetValue: resetNameInput,
   } = useInput((value) => value.trim() !== "" && value.length > 2, initialName); //ovo dobija hook kao proveru
-  console.log(enteredName, "entered");
-  console.log(initialName, "sesionname");
+  //console.log(enteredName, "entered");
+  //console.log(initialName, "sesionname");
 
   const {
     value: enteredEmail,

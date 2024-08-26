@@ -230,3 +230,45 @@
   }
 }
 
+.dialogContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.iContainer p {
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+  background-color: #007aff;
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.35rem;
+  border-radius: 50%;
+  line-height: 10px;
+  margin-top: 0;
+  color: white;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.information{
+  position: absolute;
+  margin-left: 19rem;
+  margin-top: -6.5rem;
+
+  background-color: #ffffff;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  max-width: 160px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 10px 10px 14px 3px rgba(0, 0, 0, 0.438);
+  font-family: "Rubik",sans-serif;
+  color: rgb(92, 92, 92);
+  border: rgb(92, 92, 92) 1px solid
+}
+

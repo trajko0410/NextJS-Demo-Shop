@@ -27,13 +27,13 @@ function shopPage(props) {
 
 export default shopPage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const items = await getAllItems();
 
   return {
     props: {
       items: items,
     },
-    revalidate: 360,
+    //revalidate: 360,
   };
 }

@@ -5,7 +5,13 @@ import Banner from "./Banner";
 import HomePageSlider from "../HomePage/Slider";
 import RecomendedItemsSlider from "../RecomendedItemsSlider/RecomendedItemsSlider.js";
 
+//import { useSession } from "next-auth/react";
+
 function HomePage(props) {
+  //const session = useSession();
+  //console.log(session, "sesion");
+  //console.log(session.data.user, "user");
+  //console.log(session.user.role, "role");
   return (
     <>
       <div className={styles.img_background}>

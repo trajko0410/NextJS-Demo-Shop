@@ -12,7 +12,6 @@ import style from "./AboutItem.module.css";
 
 function AboutItem(props) {
   const itemData = props.itemData;
-  //console.log(loaderData);
 
   const [itemPrice, setItemPrice] = useState();
   const [itemColor, setItemColor] = useState();
@@ -52,7 +51,7 @@ function AboutItem(props) {
           <div className={style.memory_color}>
             <Colors chosenItemColor={chosenItemColor} loaderData={itemData} />
           </div>
-          <Price itemPrice={itemPrice} />
+          <Price itemPrice={itemPrice} mainPrice={itemData.Price} />
           <AddToCartButton
             itemPrice={itemPrice}
             itemColor={itemColor}

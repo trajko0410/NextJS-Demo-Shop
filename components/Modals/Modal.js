@@ -23,7 +23,7 @@ function SuccesModal(props) {
 
   //console.log(modalState, "child");
 
-  //console.log(props.responseData);
+  //console.log(props.responseData, "prop");
   const responseData = props.responseData;
   // const message = responseData.message;
 
@@ -57,6 +57,10 @@ function SuccesModal(props) {
       resetCart();
       router.replace("/");
     }
+
+    if (typeofmodal === "CreateItem") {
+      router.replace("/admin/items");
+    }
     //console.log("homepage");
   }
 
@@ -65,12 +69,14 @@ function SuccesModal(props) {
       {createPortal(
         <div className={style.modalContainer} onClick={changeModalStateHandler}>
           <div className={style.modal}>
-            {responseData.status === 201 && (
+            {responseData.status >= 200 && responseData.status < 300 && (
               <h3>
-                {!responseData ? `${sucessText}` : `${responseData.message}`}
+                {!responseData.message
+                  ? `${sucessText}`
+                  : `${responseData.message}`}
               </h3>
             )}
-            {responseData.status !== 201 && (
+            {responseData.status > 300 && (
               <h3>
                 {!responseData ? `${failedText}` : `${responseData.message}`}
               </h3>
@@ -79,7 +85,7 @@ function SuccesModal(props) {
             <div className={style.image}>
               <Image
                 src={
-                  responseData.status === 201
+                  responseData.status >= 200 && responseData.status < 300
                     ? sucessfulSubmitting
                     : failedSubmitting
                 }
@@ -93,7 +99,9 @@ function SuccesModal(props) {
               className={style.buttonContainer}
             >
               <div className={style.button}>
-                {responseData.status === 201 ? "Perfect!" : "Close Modal"}
+                {responseData.status >= 200 && responseData.status < 300
+                  ? "Perfect!"
+                  : "Close Modal"}
               </div>
             </div>
           </div>

@@ -1,0 +1,186 @@
+.container{
+  margin-top: 8rem;
+  max-width: 1920px;
+}
+
+.container  h2{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+
+
+}
+
+.listContainer{
+  width: 95%;
+  height: 600px;
+  overflow-y: scroll;
+  background-color: rgba(229, 229, 229, 0.294);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 1px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.item{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09),0 0 1px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  height: fit-content;
+  width: 90%;
+  margin: auto;
+  display: flex;
+
+
+}
+
+.mainImage{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  display: flex;
+ 
+  
+  
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+.item  .aboutItem .title{
+  text-transform: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Rubik",sans-serif;
+  display: flex;
+
+
+}
+
+.aboutItem{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.aboutItem p{
+  color: dimgray;
+  font-size: 0.8rem;
+  margin-top: 0px;
+  margin-bottom: 0.4rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 100%;}
+
+.buttons{
+  position: relative;
+  width: fit-content;
+  align-content: flex-end;
+  margin-left: auto;
+  margin-right: 1rem;
+
+}
+
+.buttons .button{
+  height: 25px;
+  width: 60px;
+  text-decoration: none;
+  margin: auto;
+  align-items: center;
+  background: #007aff;
+  box-shadow: 0 2px 4px -2px rgba(0,122,255,0.8);
+  border-radius: 4px;
+  transition: .2s;
+  border: 1px solid transparent;
+  color: #fff;
+  font-family: "Rubik",sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  margin-top: 0rem;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons .button:hover{
+  background-color: #47a0ff;
+  transition: all 0.3s;
+}
+
+.buttons .delite{
+  background-color: red;
+  box-shadow:  0 2px 4px -2px #F88D91 ;
+}
+
+.buttons .delite:hover{
+  background: #ff757a;  transition: all 0.3s;
+}
+
+
+.noItemsImage{
+ 
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color:#47a0ff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerNoItems{
+  margin: auto;
+}
+
+.containerNoItems h4{
+  text-align: center;
+}
+
+.container .addItem{
+  display: flex;
+  height: 30px;
+  width: fit-content;
+  text-decoration: none;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  background: #007aff;
+  box-shadow: 0 2px 4px -2px rgba(0,122,255,0.8);
+  border-radius: 4px;
+  transition: .2s;
+  border: 1px solid transparent;
+  color: #fff;
+  font-family: "Rubik",sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  margin-top: 0rem;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-right: auto;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+
+.container a{
+  text-decoration: none;
+}
+.container .addItem:hover{
+  background-color: #47a0ff;
+  transition: all 0.3s;
+}

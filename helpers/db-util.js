@@ -1,7 +1,8 @@
+const firebaseCredentials = process.env.FIREBASECREDENTIALS;
+
 export async function getAllItems() {
-  const firebaseCredentials = process.env.FIREBASECREDENTIALS;
   //console.log(firebaseCredentials);
-  const response = await fetch(firebaseCredentials);
+  const response = await fetch(`${firebaseCredentials}/items.json`);
   //console.log(response);
 
   const data = await response.json();
@@ -26,4 +27,32 @@ export async function getItemById(id) {
 export async function getFeaturedItems() {
   const allEvents = await getAllItems();
   return allEvents.filter((event) => event.Recomend);
+}
+
+export async function writeItemInFirebase(itemData, itemId) {
+  const response = await fetch(`${firebaseCredentials}/items/${itemId}.json`, {
+    method: "PUT",
+    body: JSON.stringify(itemData), // Use a single argument with the full object
+    headers: {
+      "Content-Type": "application/json", // Corrected content type
+    },
+  });
+
+  return response;
+}
+
+export async function deleteItemFromFirebase(itemId) {
+  const response = await fetch(`${firebaseCredentials}/items/${itemId}.json`, {
+    method: "DELETE",
+  });
+
+  return response;
+}
+
+export async function deleteMainPhotoFromFirebase(imageUrl) {
+  const response = await fetch(`${imageUrl}`, {
+    method: "DELETE",
+  });
+
+  return response;
 }

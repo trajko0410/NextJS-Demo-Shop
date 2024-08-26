@@ -177,24 +177,30 @@ nav .hamburgerMenuActive span{
 
 
   .containeraroundlinks{
-    margin-top: 325px;
-    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 335px;
+    height: 200px;
     width: 100%;
     background-color:  #252527;
-    padding: 20px;
+    padding-bottom: 60px;
     position: absolute;
     animation: slide-in-reverse 0.5s ease-in-out forwards;
     z-index: 1;
   }
 
   .containeraroundlinksMenuOpen{
-    background-color: rebeccapurple;
-    z-index: 1;
-    margin-top: 325px;
-    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -101;
+    margin-top: 335px;
+    height: 200px;
+    padding-bottom: 60px;
     width: 100%;
     background-color: #252527;
-    padding: 20px;
     position: absolute;
     animation: slide-in-top 0.5s ease-in-out ;
   }
@@ -204,9 +210,15 @@ nav .hamburgerMenuActive span{
     justify-content: center;
   }
 
+  .navigation ul li {
+    text-align: center;
+  }
+
   .personal{
     margin-top: -25px;
     display: flex;
+    text-align: center;
+    margin-left: 8px;
     justify-content: center;
   }
 

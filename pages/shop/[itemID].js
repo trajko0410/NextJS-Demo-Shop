@@ -5,6 +5,7 @@ function itemPage(props) {
   //console.log(props.selectedItem, "d");
 
   const itemData = props.selectedItem;
+  //console.log(itemData, "item");
   return (
     <>
       <AboutItem itemData={itemData} />

@@ -7,6 +7,7 @@ function MemoryEach(props) {
 
   const nameOfItem = loaderData.Name;
   const modelsInfo = props.modelInfo;
+  const modelsMainPrice = loaderData.Price;
 
   const [price, setPrice] = useState(modelsInfo[0].price);
   const [activeId, setActiveId] = useState(modelsInfo[0].id); //ovde stavljam da je privi element iyabran uvek
@@ -53,7 +54,11 @@ function MemoryEach(props) {
             <div className={style.memory}>{modelInfo.memory}</div>
           )}
 
-          <div className={style.price}>{modelInfo.price} $</div>
+          {modelInfo.price === "" ? (
+            <div className={style.price}>{modelsMainPrice} $</div>
+          ) : (
+            <div className={style.price}>{modelInfo.price} $</div>
+          )}
         </div>
       ))}
     </div>

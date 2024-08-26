@@ -35,7 +35,7 @@ function ItemPhotoSliderEach(props) {
   }, [p]);
   //console.log(photos);
 
-  if (length === 0 || activePhoto === undefined) {
+  if (length === 0 || activePhoto === undefined || activePhoto === "") {
     return (
       <>
         <div className={style.mainImage}>

@@ -81,6 +81,7 @@ export async function handler(req, res) {
         email: email,
         password: hashedPassword,
         name: name,
+        role: "user",
       });
       client.close();
     } catch (error) {
