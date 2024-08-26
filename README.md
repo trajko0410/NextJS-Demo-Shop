@@ -8,11 +8,6 @@ To use this code you will need to set up firebase and mongodb database.
 3. You will need to follow specific structure for users to. Check mongoDbUsersStructure.png.
 
 
-You can check the demo shop by clicking on this link https://next-js-demo-shop-dewb.vercel.app/
+You can check the demo shop by clicking on this link https://next-js-demo-shop-v2.vercel.app/
 
-You can check the demo shop by clicking on this link
-https://next-js-demo-shop-dewb.vercel.app/
-
-
-You can check the demo shop by clicking on this link https://next-js-demo-shop-dewb.vercel.app .
 
