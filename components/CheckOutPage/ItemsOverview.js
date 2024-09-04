@@ -22,9 +22,9 @@ function ItemsOverview(props) {
 
   return (
     <div className={style.containerForShopingBag}>
-      <h2>Your shoping bag</h2>
+      <h2>Your shopping bag</h2>
       <div className={style.ship}>
-        {items.length === 0 ? <h3>Cart is empty!</h3> : <h3>Greate Choice!</h3>}
+        {items.length === 0 ? <h3>Cart is empty!</h3> : <h3>Great Choice!</h3>}
       </div>
       <ItemsInCart
         className={style.itemsInCart}
@@ -46,7 +46,7 @@ function ItemsOverview(props) {
       )}
       <div className={style.buttons}>
         <Link href="/shop" className={style.editShopingBag}>
-          <p>Back to shoping page</p>
+          <p>Back to shopping page</p>
           <div className={style.backgroundOfIcon}>
             <Image
               src={whiteBag}

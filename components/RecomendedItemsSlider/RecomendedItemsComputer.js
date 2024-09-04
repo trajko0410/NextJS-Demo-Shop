@@ -69,7 +69,7 @@ function RecomendedItemsComputer(props) {
   } else {
     return (
       <div className={style.recomended}>
-        <h2>What we recomend!</h2>
+        <h2>What we recommend!</h2>
         <div className={style.slider}>
           <div className={style.left}>
             {!greyArrowLeft && (

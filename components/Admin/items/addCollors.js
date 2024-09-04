@@ -163,7 +163,7 @@ export default function AddCollors(props) {
                   }
                 />
                 {hasError && (
-                  <p className={style.errortext}>Plese enter a color name.</p>
+                  <p className={style.errortext}>Please enter a color name.</p>
                 )}
               </div>
 

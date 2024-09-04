@@ -193,7 +193,7 @@ function OverviwOfOrder(props) {
             </div>
             <div className={style.buttons}>
               <Link href="/shop" className={style.editShopingBag}>
-                <p>Back to shoping page</p>
+                <p>Back to shopping page</p>
                 <div className={style.backgroundOfIcon}>
                   <Image
                     src={whiteBag}

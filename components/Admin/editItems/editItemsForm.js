@@ -381,7 +381,7 @@ export default function ItemsForm(props) {
                 <option className={style.dropdown}>Accessories</option>
               </select>
               {itemCategoryHasError && (
-                <p className={style.errortext}>Plese select one of options.</p>
+                <p className={style.errortext}>Please select one of options.</p>
               )}
             </div>
             <div className={style.containerCheckBox}>
@@ -400,7 +400,7 @@ export default function ItemsForm(props) {
                 ></input>
               </div>
               <div className={style.checkboxWrapper}>
-                <label htmlFor="recomend">Item Recomended</label>
+                <label htmlFor="recomend">Item Recommended</label>
                 <input
                   name="recomend"
                   checked={recomend}
@@ -516,7 +516,7 @@ export default function ItemsForm(props) {
             )}
           </div>
           <p className={style.objasnjenje}>
-            If you dont upload a new file old photo will be displayed.
+            If you don't upload a new file old photo will be displayed.
           </p>
 
           <AddCollors

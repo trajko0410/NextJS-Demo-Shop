@@ -30,7 +30,7 @@ function Price(props) {
   return (
     <div className={style.container}>
       {price === null ? (
-        <p>Chose a model.</p>
+        <p>Choose a model.</p>
       ) : session.status === "unauthenticated" ? (
         <div className={style.priceNotLogIN}>
           <h3>Price:</h3>
@@ -59,7 +59,7 @@ function Price(props) {
           </div>
         </div>
       ) : (
-        <p>Chose a model</p>
+        <p>Choose a model</p>
       )}
     </div>
   );

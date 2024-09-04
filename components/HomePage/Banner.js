@@ -19,22 +19,22 @@ function Banner() {
               </div>
 
               <h2>Fast delivery</h2>
-              <p>We ship our orders in two to tree working days!</p>
+              <p>We ship our orders in two to three working days!</p>
             </div>
             <div className={style.iconInfo}>
               <div className={style.image}>
                 <Image src={pricing} alt="Low prices" fill></Image>
               </div>
               <h2>Lowest prices</h2>
-              <p>We have the lowest prices compering to the our competiton!</p>
+              <p>We have the lowest prices comparing to the our competition!</p>
             </div>
             <div className={style.iconInfo}>
               <div className={style.image}>
-                <Image src={reliability} alt="Reliability" fill></Image>{" "}
+                <Image src={reliability} alt="Reliability" fill></Image>
               </div>
 
               <h2>Reliability</h2>
-              <p>Reliability and custumer suport is our main foucuse!</p>
+              <p>Reliability and customer support is our main focuse!</p>
             </div>
           </div>
         </div>

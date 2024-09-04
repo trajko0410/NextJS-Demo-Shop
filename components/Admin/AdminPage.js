@@ -22,16 +22,16 @@ export default function AdminPage(props) {
     <>
       <div className={style.container}>
         <div className={style.mainTitle}>
-          <h2>Admin Dashbord</h2>
+          <h2>Admin Dashboard</h2>
         </div>
 
         <div className={style.navBoxesContainer}>
           <div className={style.bacgroundColor1}>
             <NavBox
               heading={"Shop items"}
-              paragraph1={`Curently there is ${itemsLength} items listed.`}
+              paragraph1={`Currently there is ${itemsLength} items listed.`}
               paragraph2={
-                "Click here to add, edit or delete alredy existing items"
+                "Click here to add, edit or delete already existing items"
               }
               img={whiteBag}
               link={"/admin/items"}
@@ -50,8 +50,8 @@ export default function AdminPage(props) {
           <div className={style.bacgroundColor3}>
             <NavBox
               heading={"Newsletter"}
-              paragraph1={"Amount subsribed"}
-              paragraph2={"Send an newsletter to subscribed customers"}
+              paragraph1={"Amount subscribed"}
+              paragraph2={"Send a newsletter to subscribed customers"}
               img={newsletter}
               link={"/admin/newsletter"}
             />

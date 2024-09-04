@@ -9,7 +9,7 @@ function PaymentForm(props) {
   return (
     <div className={style.container}>
       <h3>Payment</h3>
-      <p>Implement strype or some other payment method!</p>
+      <p>Implement stripe or some other payment method!</p>
       <div className={style.buttons}>
         <div className={style.editShipping} onClick={props.back}>
           <p>Back to shipping info</p>

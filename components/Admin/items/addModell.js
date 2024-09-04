@@ -144,10 +144,7 @@ export default function AddModell(props) {
         </div>
       ))}
       <p className={style.objasnjenje}>
-        If you leave price or memory input empty program will render item name
-        and price insted of empty values. If your item has only one model, you
-        can use a short name in the Memory field. However, this name must not
-        exceed 6 characters in length.
+      If you leave the price or memory fields empty, the program will display the item name and price in place of the missing values. For items with only one model, you may use a short name in the Memory field, but it must not exceed 6 characters.
       </p>
 
       <div className={style.addNewModel}>

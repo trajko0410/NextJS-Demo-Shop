@@ -168,7 +168,7 @@ export default function AuthForm() {
               {!isLogin && (
                 <>
                   <div className={classes.control}>
-                    <label htmlFor="password">Repeate Password</label>
+                    <label htmlFor="password">Repeat Password</label>
                     <input
                       type="password"
                       id="repeatePassword"
@@ -227,7 +227,7 @@ export default function AuthForm() {
           <p className={classes.acountCreated}>{resMessage.message}</p>
           <div className={classes.actions}>
             <button onClick={successModalHandlerTurningOff}>
-              Go to log in form!
+              Go to login form!
             </button>
           </div>
         </div>

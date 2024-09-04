@@ -31,13 +31,13 @@ function Avaliable(props) {
           {avaliable && (
             <div>
               <p className={style.green}>Available.</p>
-              <p className={style.manjaP}>Item is availble.</p>
+              <p className={style.manjaP}>Item is available.</p>
             </div>
           )}
           {!avaliable && (
             <div>
               <p className={style.red}>Not available.</p>
-              <p className={style.manjaP}>Item is notavailble.</p>
+              <p className={style.manjaP}>Item is not availble.</p>
             </div>
           )}
         </div>

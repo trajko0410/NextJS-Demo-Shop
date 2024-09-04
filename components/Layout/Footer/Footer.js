@@ -25,7 +25,7 @@ function Footer() {
       </div>
       <div className={style.credential}>
         <p>
-          This is just an Demo WebSite, created by
+          This is just a Demo WebSite, created by
           <a href="mailto:filiptrajkovic@gmail.com"> Filip Trajkovic</a>.
         </p>
       </div>

@@ -152,7 +152,7 @@ function ShipingForm(props) {
   //console.log("persondata", personData);
   return (
     <div className={style.container}>
-      <h2>Shiping info</h2>
+      <h2>Shipping info</h2>
       <div className={style.ship}>
         <h3>We ship for free!</h3>
         <Image src={freeImage} alt="free" height={30} width={30}></Image>

@@ -331,7 +331,7 @@ export default function ItemsForm(props) {
                 <option className={style.dropdown}>Accessories</option>
               </select>
               {itemCategoryHasError && (
-                <p className={style.errortext}>Plese select one of options.</p>
+                <p className={style.errortext}>Please select one of options.</p>
               )}
             </div>
             <div className={style.containerCheckBox}>
@@ -345,7 +345,7 @@ export default function ItemsForm(props) {
                 ></input>
               </div>
               <div className={style.checkboxWrapper}>
-                <label htmlFor="recomended">Item Recomended</label>
+                <label htmlFor="recomended">Item Recommended</label>
                 <input
                   name="recomended"
                   ref={recomended}

@@ -56,7 +56,7 @@ export default function showAllItems(props) {
         <div className={style.noItemsImage}>
           <Image src={noItems} alt="emptyBag" width={180} height={180}></Image>
         </div>
-        <h4>We cant find any items!</h4>
+        <h4>We can't find any items!</h4>
       </div>
     );
   } else {
@@ -75,13 +75,13 @@ export default function showAllItems(props) {
         <div className={style.aboutItem}>
           <h2 className={style.title}>{item.Name}</h2>
           {item.Available === true ? (
-            <p>Item is avaliable for sale.</p>
+            <p>Item is available for sale.</p>
           ) : (
-            <p>Item is curently unavailable for sale.</p>
+            <p>Item is currently unavailable for sale.</p>
           )}
 
           {item.Recomend === true ? (
-            <p>Item is recomended.</p>
+            <p>Item is recommended.</p>
           ) : (
             <p>Item is not recomended.</p>
           )}

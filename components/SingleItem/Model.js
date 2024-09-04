@@ -37,7 +37,7 @@ function Model(props) {
 
   if (loadedModelInfoLength === 0) {
     //console.log("nemamemorije");
-    return <p>nema memorije</p>;
+    return <p>No memory</p>;
   } else {
     return (
       <>
