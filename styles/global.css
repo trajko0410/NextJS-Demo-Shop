@@ -29,7 +29,7 @@ footer{
   justify-content: end;
   justify-content: end;
   justify-self: flex-end;
-
+  width: 100%;
   align-content:end ;
 }
 
